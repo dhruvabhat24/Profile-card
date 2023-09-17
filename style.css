@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background: #139281;
+}
+.main-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 550px;
+  text-align: center;
+}
+.main-box .content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.content .box {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.share,
+.cancel {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #5229b9;
+  line-height: 50px;
+  background: #1db899;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.content .box .share {
+  opacity: 1;
+}
+#check:checked ~ .box .share {
+  opacity: 0;
+}
+#check:checked ~ .box .cancel {
+  opacity: 1;
+}
+.content .image-box {
+  position: absolute;
+  height: 450px;
+  width: 100%;
+  bottom: 130px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #329788;
+  padding: 10px;
+  border-radius: 25px;
+  transition: all 0.4s ease;
+}
+#check:checked ~ .image-box {
+  bottom: 70px;
+}
+#check {
+  display: none;
+}
+.image-box::before {
+  position: absolute;
+  content: "";
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  height: 30px;
+  width: 30px;
+  background: #28c58b;
+  z-index: -1;
+}
+.image-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 26px;
+}
+.image-box .about {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+#check:checked ~ .image-box .about {
+  opacity: 1;
+}
+.about .details {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 95px;
+}
+.details .name,
+.job {
+  font-size: 18px;
+  font-weight: 500;
+  color: #24b166;
+}
+.details .icon i {
+  font-size: 20px;
+  color: #cacfcc;
+  height: 45px;
+  width: 45px;
+  line-height: 43px;
+  border-radius: 50%;
+  border: 10px solid #d3ddd7;
+  margin: 14px 5px;
+  transition: all 0.3s ease;
+}
+.details .icon i:hover {
+  transform: scale(0.95);
+}
