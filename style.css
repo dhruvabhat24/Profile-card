@@ -6,7 +6,7 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  background: #139281;
+  background: #568a83;
 }
 .main-box {
   position: absolute;
@@ -122,12 +122,12 @@ body {
 }
 .details .icon i {
   font-size: 20px;
-  color: #cacfcc;
+  color: #dee4e7;
   height: 45px;
   width: 45px;
   line-height: 43px;
   border-radius: 50%;
-  border: 10px solid #d3ddd7;
+  border: 10px solid #38cf74;
   margin: 14px 5px;
   transition: all 0.3s ease;
 }
